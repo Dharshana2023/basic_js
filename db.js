@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
-const uri = 'mongodb+srv://root:root@crud.wmo6kfp.mongodb.net/crud';
-
+//mongodb atlas
 mongoose.connect(uri)
   .then(() => {
     console.log("MongoDB database connection established successfully");
@@ -9,3 +8,4 @@ mongoose.connect(uri)
   .catch(err => {
     console.log("MongoDB connection error:", err);
   });
+
