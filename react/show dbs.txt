@@ -1,0 +1,38 @@
+show dbs 
+show collections
+db.dropDatabase()
+
+//create
+db.users.insertOne({name:"Dharshana"})
+db.users.insertOne({name:"Dharshana"})
+db.users.insertOne({name:"Dharshana"})
+db.users.insertOne({age:20})
+db.users.insertMany([{name:"priya"},{name:"arunya"}])
+
+//read
+db.users.find()
+db.users.find({name:"Dharshana"})
+db.users.findOne()
+db.users.countDocuments
+db.users.countDocuments({name:"priya"})
+
+
+//update
+db.users.update({name:"Arunya"},{$set:{name:"sarveen"}})
+
+//delete
+db.users.deleteOne({name:"sarveen"})
+
+//eq means equal to
+//nq means not equal to 
+
+db.users.find({name:{$eq:"Dharshana"}})
+
+db.users.find({name:{$ne:"Dharshana"}})
+db.users.find({age:{$gt:"15"}})
+
+db.users.find().limit(2)
+
+
+
+
